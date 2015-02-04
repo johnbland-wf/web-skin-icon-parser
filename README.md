@@ -26,3 +26,6 @@ ruby icons.rb url/to/icons/file output.json
 ruby icons.rb url/to/icons/file
 
 ```
+
+#### More info
+- A token is required to read the raw file. Paste in the full raw file URL by clicking Raw on the [Web Skin icons file](https://github.com/Workiva/web-skin/blob/master/static/_data/constants/icons/main.json).
