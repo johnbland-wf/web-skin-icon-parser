@@ -3,6 +3,13 @@ Web Skin Icon File Parser
 
 The [Web Skin icon files](https://github.com/Workiva/web-skin/blob/master/static/_data/constants/icons/) is a JSON file with the data necessary to generate the Web Skin React [`glyphs` constant](https://github.com/Workiva/web-skin-react/blob/master/src/constants.js#L44) ordered ascending.
 
+#### Prerequisites
+
+The Bundler gem is required. If you do not have it, run the following:
+```
+$ gem install bundler
+```
+
 #### Configuration
 ```
 $ bundle
@@ -14,7 +21,9 @@ Replace `some_token_here` with a [GitHub API Key](https://github.com/settings/ap
 #### Usage
 
 ```
-ruby generate_icons.rb
+$ ruby generate_icons.rb
+
+269 icons saved to: icons.json
 ```
 
 The GitHub API is used to pull the following icon files:
