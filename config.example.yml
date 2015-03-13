@@ -1,2 +1,7 @@
 github:
     token: some_token_here
+    containing_folder: docs/_data/constants/icons
+local:
+    containing_folder: ~/path/to/web-skin/docs/_data/constants/icons
+icons:
+    filenames: [doctype-24, doctype, main-24, main, custom, custom-color]
