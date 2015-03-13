@@ -16,27 +16,45 @@ $ bundle
 $ mv config.example.yml config.yml
 ```
 
-Replace `some_token_here` with a [GitHub API Key](https://github.com/settings/applications) in the new `config.yml`.
-
-#### Usage
+*Config Options*
 
 ```
-$ ruby generate_icons.rb
+github:
+    token: some_token_here
+    containing_folder: docs/_data/constants/icons
+local:
+    containing_folder: ~/path/to/web-skin/docs/_data/constants/icons
+icons:
+    filenames: [doctype-24, doctype, main-24, main, custom, custom-color]
 
-269 icons saved to: icons.json
 ```
 
-The GitHub API is used to pull the following icon files:
-- doctype-24
-- doctype
-- main-24
-- main
-- custom
-- custom-color
+Use a [GitHub API Key](https://github.com/settings/applications) in the new `config.yml` in place of `some_token_here`.
 
-##### Change output file
+Replace `~/path/to/web-skin` with a valid path, relative or absolute, on your system.
+
+#### Local Path Usage
+
 ```
-$ ruby generate_icons.rb myfile.json
+$ ruby local.rb
+
+290 icons saved to: icons.json
 ```
 
-You should see `269 icons saved to: myfile.json` as your output; note, `269` may change in the future.
+#### GitHub Usage
+
+```
+$ ruby github.rb
+
+290 icons saved to: icons.json
+```
+
+The GitHub API is used to pull the icons::filenames from the `config.yml`.
+
+#### Change Output File
+```
+$ ruby github.rb myfile.json
+$ ruby local.rb myfile.json
+```
+
+You should see `290 icons saved to: myfile.json` as your output; note, `290` may change in the future.
